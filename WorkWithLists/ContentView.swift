@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var editMode = EditMode.active
+    
     @State private var devs = [
         FamousDevelopers(id: 0, name: "Chris Lattner", language: "Swift"),
         FamousDevelopers(id: 1, name: "Brad Cox", language: "Objective-C"),
@@ -19,12 +21,22 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        List {
-            ForEach(devs) { dev in
-                DevView(dev: dev)
-            }
-        }.padding()
+        NavigationView {
+            List {
+                ForEach(devs) { dev in
+                    DevView(dev: dev)
+                }.onMove(perform: onMove)
+            }.environment(\.editMode, $editMode)
+        }
     }
+    
+    private func onMove(source: IndexSet, destination: Int) {
+            devs.move(fromOffsets: source, toOffset: destination)
+            // we check re-ordering of the array
+            for dev in devs {
+                print("\(dev.id) - \(dev.name) - \(dev.language)")
+            }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -49,6 +61,8 @@ struct DevView: View {
             Text(dev.name)
             Spacer()
             Text(dev.language)
-        }.padding()
+        }.padding(.trailing, 10)
+        .frame(width: UIScreen.main.bounds.width * 0.8)
+        .offset(x: -30)
     }
 }
