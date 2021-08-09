@@ -62,8 +62,8 @@ struct DevView: View {
             Text(dev.name)
             Spacer()
             Text(dev.language)
-        }.padding(.trailing, 10)
+        }.padding(.trailing, 15)
         .frame(width: UIScreen.main.bounds.width * 0.8)
-        .offset(x: -30)
+        .offset(x: -20)
     }
 }
