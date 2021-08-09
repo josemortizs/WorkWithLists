@@ -45,6 +45,7 @@ struct DevView: View {
     
     var body: some View {
         HStack {
+            Text("id: \(dev.id)").padding(.trailing)
             Text(dev.name)
             Spacer()
             Text(dev.language)
