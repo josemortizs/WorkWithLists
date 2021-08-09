@@ -21,13 +21,14 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(devs) { dev in
-                    DevView(dev: dev)
-                }.onMove(perform: onMove)
-            }.environment(\.editMode, $editMode)
-        }
+        List {
+            ForEach(devs) { dev in
+                DevView(dev: dev)
+                    .hideRowSeparator(background: .white)
+            }.onMove(perform: onMove)
+        }.padding(.top, 30)
+        .listStyle(PlainListStyle())
+        .environment(\.editMode, $editMode)
     }
     
     private func onMove(source: IndexSet, destination: Int) {
