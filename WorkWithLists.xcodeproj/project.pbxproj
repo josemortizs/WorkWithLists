@@ -11,6 +11,7 @@
 		DBEDE68226C1C1A200C2D810 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE68126C1C1A200C2D810 /* ContentView.swift */; };
 		DBEDE68426C1C1A300C2D810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEDE68326C1C1A300C2D810 /* Assets.xcassets */; };
 		DBEDE68726C1C1A300C2D810 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEDE68626C1C1A300C2D810 /* Preview Assets.xcassets */; };
+		DBEDE68F26C1D0F800C2D810 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEDE68E26C1D0F800C2D810 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DBEDE68326C1C1A300C2D810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBEDE68626C1C1A300C2D810 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBEDE68826C1C1A300C2D810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBEDE68E26C1D0F800C2D810 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				DBEDE68326C1C1A300C2D810 /* Assets.xcassets */,
 				DBEDE68826C1C1A300C2D810 /* Info.plist */,
 				DBEDE68526C1C1A300C2D810 /* Preview Content */,
+				DBEDE68E26C1D0F800C2D810 /* Utils.swift */,
 			);
 			path = WorkWithLists;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				DBEDE68226C1C1A200C2D810 /* ContentView.swift in Sources */,
 				DBEDE68026C1C1A200C2D810 /* WorkWithListsApp.swift in Sources */,
+				DBEDE68F26C1D0F800C2D810 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
